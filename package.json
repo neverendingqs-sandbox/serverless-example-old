@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/neverendingqs-sandbox/serverless-example#readme",
   "devDependencies": {
-    "eslint": "^3.15.0"
+    "eslint": "^3.15.0",
+    "serverless-plugin-include-dependencies": "^1.2.0"
   }
 }
