@@ -9,4 +9,11 @@ plugins:
 
 functions:
   hello:
-    handler: src/index.hello
+    handler: src/server.handler 
+    events:
+      - http:
+          path: /
+          method: get
+      - http:
+          path: /hello
+          method: get
