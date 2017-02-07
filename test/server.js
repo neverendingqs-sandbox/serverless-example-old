@@ -1,0 +1,20 @@
+const assert = require('chai').assert;
+const request = require('supertest-as-promised');
+
+const app = require('../src/server');
+
+describe('/', function() {
+  it('returns /', function() {
+    request(app)
+      .get('/')
+      .expect(200)
+      .then(res => assert.equal(res.body.message, '/'));
+  });
+
+  it('returns /hello', function() {
+    request(app)
+      .get('/hello')
+      .expect(200)
+      .then(res => assert.equal(res.body.message, '/hello'));
+  });
+});
