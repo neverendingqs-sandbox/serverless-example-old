@@ -9,7 +9,7 @@ app.get('/', function(req, res) {
   });
 });
 
-app.get('/hello', function(req, res) {
+app.post('/hello', function(req, res) {
   res.json({
     message: '/hello'
   });

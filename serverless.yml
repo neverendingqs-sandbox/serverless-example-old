@@ -13,7 +13,7 @@ functions:
     events:
       - http:
           path: /
-          method: get
+          method: ANY
       - http:
-          path: /hello
-          method: get
+          path: /{any+}
+          method: ANY
