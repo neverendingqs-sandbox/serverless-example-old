@@ -8,7 +8,7 @@ describe('/', function() {
     request(app)
       .get('/')
       .expect(200)
-      .then(res => assert.equal(res.body.message, '/'));
+      .then(res => assert.include(res.text, '<h1>Hello World</h1>'));
   });
 
   it('returns /hello', function() {
