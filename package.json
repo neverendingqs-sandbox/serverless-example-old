@@ -33,7 +33,6 @@
     "serverless-dynamodb-local": "^0.2.18",
     "serverless-offline": "^3.8.3",
     "serverless-plugin-include-dependencies": "^1.2.0",
-    "supertest": "^3.0.0",
-    "supertest-as-promised": "^4.0.2"
+    "supertest": "^3.0.0"
   }
 }
