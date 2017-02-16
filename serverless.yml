@@ -5,8 +5,31 @@ provider:
   runtime: nodejs4.3
 
 plugins:
+  - serverless-dynamodb-local
   - serverless-offline
   - serverless-plugin-include-dependencies
+
+custom:
+  dynamodb:
+    start:
+      port: 8000
+      inMemory: true
+
+resources:
+  Resources:
+    sessionsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: sessionsTable
+        AttributeDefinitions:
+          - AttributeName: session
+            AttributeType: S
+        KeySchema:
+          - AttributeName: session
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
 
 functions:
   hello:
